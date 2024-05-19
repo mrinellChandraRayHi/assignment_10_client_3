@@ -4,6 +4,8 @@ import Home from "../Pages/Home";
 import AllArtAndCraftItems from "../Pages/AllArtAndCraftItems";
 import AddCraftItem from "../Pages/AddCraftItem";
 import MyArtAndCraftList from "../Pages/MyArtAndCraftList";
+import SignUp from "../Pages/SignUp";
+import SignIn from "../Pages/SignIn";
 
 
 export const router = createBrowserRouter([
@@ -26,6 +28,14 @@ export const router = createBrowserRouter([
             {
                 path:'/myArtAndCraftList',
                 element:<MyArtAndCraftList/>
+            },
+            {
+                path:'/signUp',
+                element:<SignUp/>
+            },
+            {
+                path:'/signIn',
+                element:<SignIn/>
             }
         ]
     },
