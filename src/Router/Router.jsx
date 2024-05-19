@@ -7,12 +7,14 @@ import MyArtAndCraftList from "../Pages/MyArtAndCraftList";
 import SignUp from "../Pages/SignUp";
 import SignIn from "../Pages/SignIn";
 import PrivateRouter from "../PrivateRouter/PrivateRouter";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Layout/>,
+        errorElement:<ErrorPage/>,
         children:[
             {
                 path:'/',
