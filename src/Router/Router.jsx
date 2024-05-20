@@ -8,6 +8,7 @@ import SignUp from "../Pages/SignUp";
 import SignIn from "../Pages/SignIn";
 import PrivateRouter from "../PrivateRouter/PrivateRouter";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import UpdateCraftItems from "../Pages/UpdateCraftItems";
 
 
 export const router = createBrowserRouter([
@@ -32,6 +33,11 @@ export const router = createBrowserRouter([
             {
                 path:'/myArtAndCraftList',
                 element:<PrivateRouter><MyArtAndCraftList/></PrivateRouter>
+            },
+            {
+                path:'/updateCraftItems/:id',
+                element:<UpdateCraftItems/>,
+                loader:({params})=>fetch(`http://localhost:5000/crafts/${params.id}`)
             },
             {
                 path:'/signUp',

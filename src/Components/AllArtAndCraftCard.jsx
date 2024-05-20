@@ -2,6 +2,7 @@ import { MdDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { TbListDetails } from "react-icons/tb";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 const AllArtAndCraftCard = ({allartandcraft, allartAndCrafts, setAllArtAndCrafts}) => {
     const {item_name, subcategory_name, pricing, customization, processing_time, rating, description, photo,_id}=allartandcraft;
     const handleDelete=(_id)=>{
@@ -48,7 +49,9 @@ const AllArtAndCraftCard = ({allartandcraft, allartAndCrafts, setAllArtAndCrafts
                 <p>Description: {description}</p>
                 <div className="card-actions justify-end">
                 <button className="btn bg-green-600 text-xl text-white btn-sm hover:text-black"><TbListDetails /></button>
+                <Link to={`/updateCraftItems/${_id}`}>
                 <button className="btn bg-yellow-600 text-xl text-white btn-sm hover:text-black"><CiEdit /></button>
+                </Link>
                 <button onClick={()=>handleDelete(_id)} className="btn bg-red-600 text-xl text-white btn-sm hover:text-black"><MdDelete /></button>
                 </div>
             </div>
