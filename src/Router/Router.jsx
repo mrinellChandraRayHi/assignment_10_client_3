@@ -37,12 +37,12 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/updateCraftItems/:id',
-                element:<UpdateCraftItems/>,
+                element:<PrivateRouter><UpdateCraftItems/></PrivateRouter>,
                 loader:({params})=>fetch(`http://localhost:5000/crafts/${params.id}`)
             },
             {
                 path:'/details/:id',
-                element:<Details/>,
+                element:<PrivateRouter><Details/></PrivateRouter>,
                 loader:({params})=>fetch(`http://localhost:5000/crafts/${params.id}`)
             },
             {
