@@ -1,3 +1,5 @@
+import { FaLongArrowAltLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AddCraftItem = () => {
@@ -34,6 +36,7 @@ const AddCraftItem = () => {
                     timer: 1500
                 });
             }
+            form.reset();
         })
     }
     return (
@@ -79,6 +82,9 @@ const AddCraftItem = () => {
                     <div>
                         <input className="w-full border border-black p-2 rounded mt-10 bg-red-200 font-bold" type="submit" value="Add Craft" />
                     </div>
+                    <Link to='/allArtAndCraftItems'>
+                    <button className="btn btn-active btn-primary btn-sm text-xl mt-5"><FaLongArrowAltLeft /></button>
+                    </Link>
                 </div>
             </form>
         </div>
