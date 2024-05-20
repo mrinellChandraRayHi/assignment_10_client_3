@@ -6,7 +6,7 @@ const Details = () => {
     const {item_name, subcategory_name, pricing, customization, processing_time, rating, description, photo}=loadedDetails;
     return (
         <div className="card card-compact w-96 bg-base-100 mx-auto mt-20 shadow-xl">
-            <figure><img src={photo} alt="Shoes" /></figure>
+            <figure><img src={photo} alt="Photo" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Item_name: {item_name}</h2>
                 <p>Subcategory_name: {subcategory_name}</p>

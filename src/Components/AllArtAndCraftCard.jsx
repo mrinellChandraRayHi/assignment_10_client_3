@@ -38,7 +38,7 @@ const AllArtAndCraftCard = ({allartandcraft, allartAndCrafts, setAllArtAndCrafts
     }
     return (
         <div className="card card-compact bg-base-100 shadow-xl">
-            <figure><img className="h-[300px] w-full" src={photo} alt="Shoes" /></figure>
+            <figure><img className="h-[300px] w-full" src={photo} alt="Photo" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Item_name: {item_name}</h2>
                 <p>Subcategory_name: {subcategory_name}</p>
