@@ -22,11 +22,12 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/allArtAndCraftItems',
-                element:<PrivateRouter><AllArtAndCraftItems/></PrivateRouter>
+                element:<AllArtAndCraftItems/>,
+                loader:()=>fetch('http://localhost:5000/crafts')
             },
             {
                 path:'/addCraftItem',
-                element:<PrivateRouter><AddCraftItem/></PrivateRouter>
+                element:<AddCraftItem/>
             },
             {
                 path:'/myArtAndCraftList',
