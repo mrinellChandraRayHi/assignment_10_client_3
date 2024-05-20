@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
             {
                 path:'/allArtAndCraftItems',
                 element:<PrivateRouter><AllArtAndCraftItems/></PrivateRouter>,
-                loader:()=>fetch('http://localhost:5000/crafts')
+                loader:()=>fetch('https://assignment-10-server-3.vercel.app/crafts')
             },
             {
                 path:'/addCraftItem',
@@ -38,12 +38,12 @@ export const router = createBrowserRouter([
             {
                 path:'/updateCraftItems/:id',
                 element:<PrivateRouter><UpdateCraftItems/></PrivateRouter>,
-                loader:({params})=>fetch(`http://localhost:5000/crafts/${params.id}`)
+                loader:({params})=>fetch(`https://assignment-10-server-3.vercel.app/crafts/${params.id}`)
             },
             {
                 path:'/details/:id',
                 element:<PrivateRouter><Details/></PrivateRouter>,
-                loader:({params})=>fetch(`http://localhost:5000/crafts/${params.id}`)
+                loader:({params})=>fetch(`https://assignment-10-server-3.vercel.app/crafts/${params.id}`)
             },
             {
                 path:'/signUp',

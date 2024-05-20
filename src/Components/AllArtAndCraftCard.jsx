@@ -17,7 +17,7 @@ const AllArtAndCraftCard = ({allartandcraft, allartAndCrafts, setAllArtAndCrafts
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
         if (result.isConfirmed) {
-            fetch(`http://localhost:5000/crafts/${_id}`,{
+            fetch(`https://assignment-10-server-3.vercel.app/crafts/${_id}`,{
                 method:"DELETE"
             })
             .then(res=>res.json())
