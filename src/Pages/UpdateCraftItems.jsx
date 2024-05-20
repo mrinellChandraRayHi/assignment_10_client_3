@@ -1,4 +1,5 @@
-import { useLoaderData } from "react-router-dom";
+import { FaLongArrowAltLeft } from "react-icons/fa";
+import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateCraftItems = () => {
@@ -32,7 +33,7 @@ const UpdateCraftItems = () => {
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
-                    title: "Your work has been saved",
+                    title: "Your Craft has been updated",
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -82,6 +83,9 @@ const UpdateCraftItems = () => {
                     <div>
                         <input className="w-full border border-black p-2 rounded mt-10 bg-red-200 font-bold" type="submit" value="Update Craft" />
                     </div>
+                    <Link to='/allArtAndCraftItems'>
+                    <button className="btn btn-primary btn-sm mt-5 text-xl"><FaLongArrowAltLeft /></button>
+                    </Link>
                 </div>
             </form>
         </div>

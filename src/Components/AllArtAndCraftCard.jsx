@@ -37,7 +37,7 @@ const AllArtAndCraftCard = ({allartandcraft, allartAndCrafts, setAllArtAndCrafts
         });
     }
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="card card-compact bg-base-100 shadow-xl">
             <figure><img src={photo} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Item_name: {item_name}</h2>
@@ -48,7 +48,9 @@ const AllArtAndCraftCard = ({allartandcraft, allartAndCrafts, setAllArtAndCrafts
                 <p>Rating: {rating}</p>
                 <p>Description: {description}</p>
                 <div className="card-actions justify-end">
+                <Link to={`/details/${_id}`}>
                 <button className="btn bg-green-600 text-xl text-white btn-sm hover:text-black"><TbListDetails /></button>
+                </Link>
                 <Link to={`/updateCraftItems/${_id}`}>
                 <button className="btn bg-yellow-600 text-xl text-white btn-sm hover:text-black"><CiEdit /></button>
                 </Link>
